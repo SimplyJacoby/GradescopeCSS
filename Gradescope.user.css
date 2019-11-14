@@ -1,1 +1,221 @@
+/* ==UserStyle==
+@name           Gradescope
+@namespace      https://github.com/SimplyJacoby
+@version        1.0.0
+@description    Theme for Gradescope.com
+@author         Me
+@author         SimplyJacoby
+@homepageURL    https://github.com/SimplyJacoby/GradescopeCSS
+@supportURL     https://github.com/SimplyJacoby/GradescopeCSS/issues
+@updateURL      https://raw.githubusercontent.com/SimplyJacoby/GradescopeCSS/master/Gradescope.user.css
+@license        CC-BY-SA-4.0
+@preprocessor   default
+@var select bg-color "Main Background Color" {
+    "Arc Dark": "#383c4a",
+    "Atom One Dark (Default)*": "#21252b",
+    "Deep Dark": "#1A1A1A",
+    "Discord Dark": "#23272A",
+    "Dracula":"#282a36",
+    "Light": "#F3F3F4",
+    "Microsoft Dark": "#171717",
+    "Pink": "#fb607f",
+    "Custom": "var(--custom-bg-color)"
+}
+@var color custom-bg-color "Custom Main Background Color" #21252b
+@var select bg-2-color "Secondary Background Color" {
+    "Arc Dark": "#404552",
+    "Atom One Dark (Default)*": "#282C34",
+    "Deep Dark": "#222222",
+    "Discord Dark": "#36393F",
+    "Dracula":"#44475a",
+    "Light": "#ffffff",
+    "Microsoft Dark": "#1F1F1F",
+    "Pink": "#fe7f9c",
+    "Custom": "var(--custom-bg-2-color)"
+}
+@var color custom-bg-2-color "Custom Secondary Background Color" #282C34
+@var select bg-3-color "Tertiary Background Color" {
+    "Arc Dark": "#4b5162",
+    "Atom One Dark (Default)*": "#333842",
+    "Deep Dark": "#232938",
+    "Discord Dark": "#42464D",
+    "Dracula":"#686C8A",
+    "Light": "#FAFAFA",
+    "Microsoft Dark": "#272727",
+    "Pink": "#fca3b7",
+    "Custom": "var(--custom-bg-3-color)"
+}
+@var color custom-bg-3-color "Custom Tertiary Background Color" #333842
+@var select button-color "Button Color"{
+    "Arc Dark": "#5294e2",
+    "Atom One Dark (Default)*": "#303344",
+    "Deep Dark": "#006C69",
+    "Discord Dark": "#7289DA",
+    "Dracula":"#6272a4",
+    "Light": "#A8FFEE",
+    "Microsoft Dark": "#1073D6",
+    "Pink": "#de3163",
+    "Custom": "var(--custom-button-color)"
+}
+@var color custom-button-color "Custom Button Color" #303344
+@var select textarea-color "Text Input Background Color" {
+    "Arc Dark": "#7c818c",
+    "Atom One Dark (Default)*": "#303344",
+    "Deep Dark": "#006C69",
+    "Discord Dark": "#4A4D53",
+    "Dracula":"#81859E",
+    "Light": "#F2F2F2",
+    "Microsoft Dark": "#363636",
+    "Pink": "#de3163",
+    "Custom": "var(--custom-textarea-color)"
+}
+@var color custom-textarea-color "Custom Text Input Background Color" #303344
+@var select border-color "Border Color" {
+    "Arc Dark": "#4D596C",
+    "Atom One Dark (Default)*": "#47474b",
+    "Deep Dark": "#454545",
+    "Discord Dark": "#3E4145",
+    "Dracula":"#1C1D24",
+    "Light": "#efefef",
+    "Microsoft Dark": "#333333",
+    "Pink": "#fbaed2",
+    "Custom": "var(--custom-border-color)"
+}
+@var color custom-border-color "Custom Border Color" #47474b
+@var select hover-color "Mouse Hover Color" {
+    "Arc Dark": "#2B7ADB",
+    "Atom One Dark (Default)*": "#434462",
+    "Deep Dark": "#016964",
+    "Discord Dark": "#6680D7",
+    "Dracula":"#596A9B",
+    "Light": "#79FFE4",
+    "Microsoft Dark": "#1A4B7D",
+    "Pink": "#ec5578",
+    "Custom": "var(--custom-hover-color)"
+}
+@var color custom-hover-color "Custom Mouse Hover Color" #434462
+@var select text-color "Text Color" {
+    "Arc Dark": "#ffffff",
+    "Atom One Dark (Default)*": "#D7E2EF",
+    "Deep Dark": "#D7E2EF",
+    "Discord Dark": "#ffffff",
+    "Dracula":"#f8f8f2",
+    "Light": "#2D2D2D",
+    "Microsoft Dark": "#ffffff",
+    "Pink": "#ffffff",
+    "Custom": "var(--custom-text-color)"
+}
+@var color custom-text-color "Custom Text Color" #D7E2EF
 
+==/UserStyle== */
+
+@-moz-document url-prefix("https://www.gradescope.com/") {
+    * {
+        color: var(--text-color) !important; 
+    }
+    
+    #main-content  .l-contentWrapper {
+        background-color: var(--bg-color) !important;
+    }
+    
+    /* about page */
+    .l-content {
+        background-color: var(--bg-color) !important;
+    }
+    .teamMember--description {
+        background-color: var(--bg-3-color) !important;
+        opacity: .85 !important;
+    }
+    
+    /* sidebar */
+    .l-sidebar {
+        background-color: var(--bg-2-color) !important;
+    }
+    .sidebar--menuItemIcon::after {
+        border: none;
+    }
+    .l-rightSidebar {
+        background-color: var(--bg-2-color) !important;
+    }
+    
+    /* dashboard */
+    .courseBox {
+        background-color: var(--bg-3-color) !important;
+    }
+    .courseBox:hover {
+        background-color: var(--hover-color) !important;
+    }
+    
+    /* table */
+    .table tr {
+        border-color: var(--border-color) !important;
+    }
+    .table tr:nth-child(2n) {
+        background-color: var(--bg-3-color) !important;
+    }
+    
+    /* jBox */
+    .jBox-container {
+        background-color: var(--bg-3-color) !important;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .5) !important;
+        border-color: var(--border-color) !important;
+    }
+    .jBox-container * {
+        border-color: var(--border-color) !important;
+    }
+    
+    .jBox-container .popover--listItem:hover {
+        background-color: var(--hover-color) !important;
+    }
+    
+    /* buttons */
+    .btn:disabled {
+        background-color: var(--button-color) !important;
+        border-color: var(--border-color) !important;
+    }
+    .blankState--btn {
+        background-color: var(--button-color) !important;
+        border-color: var(--border-color) !important;
+    }
+    .blankState--btn:hover {
+        background-color: var(--hover-color) !important;
+    }
+    
+    /* submission outline */
+    .submissionOutlineRubricItem-present {
+        background-color: var(--bg-3-color) !important;
+        border-color: var(--border-color) !important;
+    }
+    
+    /* modal */
+    .modal {
+        background-color: var(--bg-color) !important;
+        border: 1px solid var(--border-color) !important;
+        border-radius: 5px !important;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .5) !important;
+    }
+    .modal *:not(.btn) {
+        border-color: var(--border-color) !important;
+    }
+    
+    /* text input */
+    .form--textInput {
+        background-color: var(--text-area-color) !important;
+        border: 1px solid var(--border-color) !important;
+    }
+    
+    /* help center */
+    .helpCenter .helpCenter--homeLink {
+        background-color: var(--button-color) !important;
+        border-color: var(--border-color) !important;
+    }
+    .helpCenter .helpCenter--homeLink:hover {
+        background-color: var(--hover-color) !important;
+    }
+    .helpCenter--footer {
+        background-color: #0000 !important;
+    }
+    .helpCenter--itemTitle:hover, .helpCenter--itemTitle:focus {
+        background-color: var(--hover-color) !important;
+    }
+}
